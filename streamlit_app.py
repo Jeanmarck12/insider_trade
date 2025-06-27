@@ -41,21 +41,31 @@ import io
 
 
 st.set_page_config(
-    page_title="Insider Trade Value Predictor",
+    page_title="Insiders Scoopr",
     page_icon="📈",
     layout="wide"
 )
 
 # All other Streamlit code goes below this!
-st.markdown("#### 🎯 Objective")
-st.write("This app allows users to explore and understand SEC Form 4 insider trading data, with the goal of predicting the dollar value of transactions based on reported attributes such as ownership type, transaction codes, and share activity.")
+st.markdown("# Insiders Scoop")
+st.write()
+st.write()
+st.write("### 🎯 Objective – Insiders Scoop")
+
+st.write("""
+**Insiders Scoop** is designed to help users explore and better understand SEC Form 4 insider trading data. The app aims to **predict the likely range** (low, medium, or high) of transaction values based on reported attributes like ownership type, transaction codes, and share activity.
+
+Beyond prediction, the app provides **educational insights** to make insider trades more transparent—highlighting patterns, clarifying confusing terminology, and addressing common issues found in raw SEC filings.
+
+Ultimately, **Insiders Scoop empowers users** to interpret insider trading behavior with confidence, whether they’re investors, students, or simply curious about market dynamics.
+""")
 
 st.write()
 st.write()
 st.write()
 
 
-page = st.sidebar.selectbox("Select Page",["Introduction 📘","Visualization 📊","Prediction","Automated Report 📑"])
+page = st.sidebar.selectbox("Select Page",["Introduction 📘","Visualization 📊","Prediction",])
 st.image("trade.jpeg")
 st.write()
 st.write()
