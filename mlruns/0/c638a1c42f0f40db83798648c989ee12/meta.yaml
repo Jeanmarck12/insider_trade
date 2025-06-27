@@ -1,0 +1,14 @@
+artifact_uri: file:///workspaces/insider_trade/mlruns/0/c638a1c42f0f40db83798648c989ee12/artifacts
+end_time: 1751030134023
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c638a1c42f0f40db83798648c989ee12
+run_name: Decision Tree
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751030130232
+status: 3
+tags: []
+user_id: vscode

@@ -1587,28 +1587,6 @@ elif page == "Prediction":
 
         st.success(f"🥇 Best Model: **{best_model}** with Accuracy: **{best_score:.4f}**")
 
-        if st.checkbox("🔍 Show MLflow tracking info"):
-            st.markdown("### 📂 View Tracked MLflow Runs")
 
-            # Search MLflow runs from the current experiment
-            runs_df = mlflow.search_runs(order_by=["metrics.accuracy DESC"])
-
-
-            if runs_df.empty:
-                st.info("No runs tracked yet. Train a model to populate MLflow logs.")
-            else:
-                # Show relevant columns
-                display_cols = ["run_id", "params_max_depth", "params_n_estimators", "metrics_accuracy", "tags.mlflow.runName"]
-                filtered_cols = [col for col in display_cols if col in runs_df.columns]
-
-                st.dataframe(runs_df[filtered_cols].rename(columns={
-                    "run_id": "Run ID",
-                    "params_max_depth": "Max Depth",
-                    "params_n_estimators": "N Estimators",
-                    "metrics_accuracy": "Accuracy",
-                    "tags.mlflow.runName": "Model Name"
-                }))
-            csv = runs_df[filtered_cols].to_csv(index=False).encode("utf-8")
-            st.download_button("📥 Download MLflow Logs (CSV)", csv, "mlflow_runs.csv", "text/csv")
 
 

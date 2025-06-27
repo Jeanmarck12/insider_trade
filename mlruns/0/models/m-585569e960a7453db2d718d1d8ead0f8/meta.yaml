@@ -1,0 +1,10 @@
+artifact_location: file:///workspaces/insider_trade/mlruns/0/models/m-585569e960a7453db2d718d1d8ead0f8/artifacts
+creation_timestamp: 1751030406069
+experiment_id: '0'
+last_updated_timestamp: 1751030408404
+model_id: m-585569e960a7453db2d718d1d8ead0f8
+model_type: null
+name: Decision Tree
+source_run_id: 81b18fd4231543aea456549b7d4aa1d5
+status: 2
+status_message: null

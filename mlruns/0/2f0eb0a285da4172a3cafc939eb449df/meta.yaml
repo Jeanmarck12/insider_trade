@@ -1,0 +1,14 @@
+artifact_uri: file:///workspaces/insider_trade/mlruns/0/2f0eb0a285da4172a3cafc939eb449df/artifacts
+end_time: 1751030511511
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2f0eb0a285da4172a3cafc939eb449df
+run_name: Gradient Boosting
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751030508684
+status: 3
+tags: []
+user_id: vscode
