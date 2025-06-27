@@ -1,6 +1,12 @@
-streamlit
 pandas
-numpy
 matplotlib
 seaborn
+streamlit
+numpy
 scikit-learn
+scipy
+plotly
+graphviz
+xgboost
+mlflow
+carte-ai @ git+https://github.com/cartesio-ai/carte_ai.git
