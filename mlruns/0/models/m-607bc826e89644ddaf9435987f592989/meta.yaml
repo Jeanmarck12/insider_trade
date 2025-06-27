@@ -1,0 +1,10 @@
+artifact_location: file:///workspaces/insider_trade/mlruns/0/models/m-607bc826e89644ddaf9435987f592989/artifacts
+creation_timestamp: 1750999789328
+experiment_id: '0'
+last_updated_timestamp: 1750999791230
+model_id: m-607bc826e89644ddaf9435987f592989
+model_type: null
+name: Random Forest
+source_run_id: f7e761e4e9d74f8390659e193636130b
+status: 2
+status_message: null

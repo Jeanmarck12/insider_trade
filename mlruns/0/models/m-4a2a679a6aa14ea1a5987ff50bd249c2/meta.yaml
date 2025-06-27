@@ -1,0 +1,10 @@
+artifact_location: file:///workspaces/insider_trade/mlruns/0/models/m-4a2a679a6aa14ea1a5987ff50bd249c2/artifacts
+creation_timestamp: 1750999667312
+experiment_id: '0'
+last_updated_timestamp: 1750999669125
+model_id: m-4a2a679a6aa14ea1a5987ff50bd249c2
+model_type: null
+name: Gradient Boosting
+source_run_id: 681eaa71a62040938e29e42dda5899c2
+status: 2
+status_message: null

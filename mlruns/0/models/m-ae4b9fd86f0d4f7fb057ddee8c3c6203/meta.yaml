@@ -1,0 +1,10 @@
+artifact_location: file:///workspaces/insider_trade/mlruns/0/models/m-ae4b9fd86f0d4f7fb057ddee8c3c6203/artifacts
+creation_timestamp: 1751000003128
+experiment_id: '0'
+last_updated_timestamp: 1751000004898
+model_id: m-ae4b9fd86f0d4f7fb057ddee8c3c6203
+model_type: null
+name: XGBoost
+source_run_id: 3c88b8d3fba5435fb97938eaddcc406b
+status: 2
+status_message: null

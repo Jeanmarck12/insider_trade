@@ -1,0 +1,14 @@
+artifact_uri: file:///workspaces/insider_trade/mlruns/0/ada1168d44ff4479bb0efc048b9338fd/artifacts
+end_time: 1750998391332
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ada1168d44ff4479bb0efc048b9338fd
+run_name: Bagging
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750998388530
+status: 3
+tags: []
+user_id: vscode
