@@ -1529,13 +1529,12 @@ elif page == "Prediction":
             "Bagging": BaggingClassifier(n_estimators=n_estimators, random_state=random_state)
         }
 
-        
+
         import tempfile
 
         st.markdown("## 📊 Results")
         best_model = None
         best_score = 0
-
         for name, model in models.items():
             with mlflow.start_run(run_name=name):
                 model.fit(X_train, y_train)
@@ -1545,9 +1544,10 @@ elif page == "Prediction":
                 mlflow.log_params(model.get_params())
                 mlflow.log_metric("accuracy", acc)
 
-                # ✅ TEMP SAFE LOGGING FOR STREAMLIT CLOUD
-                with tempfile.TemporaryDirectory() as tmp_dir:
-                    mlflow.sklearn.log_model(model, artifact_path=name)
+                # 🚫 Don't log the model itself to avoid Streamlit Cloud crash
+                # with tempfile.TemporaryDirectory() as tmp_dir:
+                #     mlflow.sklearn.log_model(model, artifact_path=name)
+                pass
 
                 st.write(f"{name} Accuracy: **{acc:.4f}**")
 
@@ -1555,7 +1555,7 @@ elif page == "Prediction":
                     best_score = acc
                     best_model = name
 
-        
+                
 
 
 

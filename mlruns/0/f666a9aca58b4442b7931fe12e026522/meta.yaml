@@ -1,0 +1,14 @@
+artifact_uri: file:///workspaces/insider_trade/mlruns/0/f666a9aca58b4442b7931fe12e026522/artifacts
+end_time: 1751031231633
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f666a9aca58b4442b7931fe12e026522
+run_name: XGBoost
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751031231490
+status: 3
+tags: []
+user_id: vscode

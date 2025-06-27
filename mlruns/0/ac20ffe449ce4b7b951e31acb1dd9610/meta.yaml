@@ -1,0 +1,14 @@
+artifact_uri: file:///workspaces/insider_trade/mlruns/0/ac20ffe449ce4b7b951e31acb1dd9610/artifacts
+end_time: 1751031230692
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ac20ffe449ce4b7b951e31acb1dd9610
+run_name: Random Forest
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1751031230359
+status: 3
+tags: []
+user_id: vscode
