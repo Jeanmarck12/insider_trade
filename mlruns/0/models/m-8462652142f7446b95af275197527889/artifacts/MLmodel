@@ -1,0 +1,22 @@
+artifact_path: file:///workspaces/insider_trade/mlruns/0/models/m-8462652142f7446b95af275197527889/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.12
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.5.2
+mlflow_version: 3.1.1
+model_id: m-8462652142f7446b95af275197527889
+model_size_bytes: 4594
+model_uuid: m-8462652142f7446b95af275197527889
+prompts: null
+run_id: 5371b793a9e8473c9b43879d500a87a5
+utc_time_created: '2025-06-27 13:30:50.097834'

@@ -1,0 +1,10 @@
+artifact_location: file:///workspaces/insider_trade/mlruns/0/models/m-d54ad9b30acd4e569b1830067ba9c3de/artifacts
+creation_timestamp: 1751030689994
+experiment_id: '0'
+last_updated_timestamp: 1751030692162
+model_id: m-d54ad9b30acd4e569b1830067ba9c3de
+model_type: null
+name: Bagging
+source_run_id: 82d8cbc6705a4fecb96e2af0d86b14b5
+status: 2
+status_message: null

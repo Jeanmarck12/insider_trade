@@ -1529,7 +1529,9 @@ elif page == "Prediction":
             "Bagging": BaggingClassifier(n_estimators=n_estimators, random_state=random_state)
         }
 
-   
+        
+        import tempfile
+
         st.markdown("## 📊 Results")
         best_model = None
         best_score = 0
@@ -1540,16 +1542,27 @@ elif page == "Prediction":
                 y_pred = model.predict(X_test)
                 acc = accuracy_score(y_test, y_pred)
 
-                # Log parameters and metrics
                 mlflow.log_params(model.get_params())
                 mlflow.log_metric("accuracy", acc)
-                mlflow.sklearn.log_model(model, name)
+
+                # ✅ TEMP SAFE LOGGING FOR STREAMLIT CLOUD
+                with tempfile.TemporaryDirectory() as tmp_dir:
+                    mlflow.sklearn.log_model(model, artifact_path=name)
 
                 st.write(f"{name} Accuracy: **{acc:.4f}**")
 
                 if acc > best_score:
                     best_score = acc
                     best_model = name
+
+        
+
+
+
+
+
+
+
 
 
         st.markdown("### 🧾 Summary Report")
@@ -1588,5 +1601,31 @@ elif page == "Prediction":
         st.success(f"🥇 Best Model: **{best_model}** with Accuracy: **{best_score:.4f}**")
 
 
+
+
+
+        if st.checkbox("🔍 Show MLflow tracking info"):
+            st.markdown("### 📂 View Tracked MLflow Runs")
+
+            # Search MLflow runs from the current experiment
+            runs_df = mlflow.search_runs(order_by=["metrics.accuracy DESC"])
+
+
+            if runs_df.empty:
+                st.info("No runs tracked yet. Train a model to populate MLflow logs.")
+            else:
+                # Show relevant columns
+                display_cols = ["run_id", "params_max_depth", "params_n_estimators", "metrics_accuracy", "tags.mlflow.runName"]
+                filtered_cols = [col for col in display_cols if col in runs_df.columns]
+
+                st.dataframe(runs_df[filtered_cols].rename(columns={
+                    "run_id": "Run ID",
+                    "params_max_depth": "Max Depth",
+                    "params_n_estimators": "N Estimators",
+                    "metrics_accuracy": "Accuracy",
+                    "tags.mlflow.runName": "Model Name"
+                }))
+            csv = runs_df[filtered_cols].to_csv(index=False).encode("utf-8")
+            st.download_button("📥 Download MLflow Logs (CSV)", csv, "mlflow_runs.csv", "text/csv")
 
 
