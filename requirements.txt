@@ -9,5 +9,3 @@ plotly
 graphviz
 xgboost
 mlflow
-pyngrok
-carte-ai @ git+https://github.com/cartesio-ai/carte_ai.git

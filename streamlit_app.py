@@ -28,10 +28,6 @@ import plotly.express as px
 import json
 from sklearn.model_selection import GroupShuffleSplit
 from sklearn.metrics import r2_score, roc_auc_score
-from carte_ai import CARTERegressor, CARTEClassifier
-from carte_ai import Table2GraphTransformer
-from carte_ai.configs.directory import config_directory
-from carte_ai.data.load_data import *
 from sklearn.ensemble import RandomForestClassifier
 from xgboost import XGBClassifier
 from xgboost import plot_tree
